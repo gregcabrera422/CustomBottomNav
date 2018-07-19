@@ -10,8 +10,7 @@
         android:title="My Stay"></item>
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_home_black_48dp"
-        android:title="Home"></item>
+        android:title=""></item>
     <item
         android:id="@+id/notification"
         android:icon="@drawable/ic_home_black_48dp"

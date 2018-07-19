@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/black">
+    android:background="@color/pine">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/myNavigation"
@@ -14,29 +14,18 @@
         android:layout_gravity="bottom"
         android:background="@color/white"
         app:labelVisibilityMode="labeled"
-        app:itemBackground="@color/white"
-        app:menu="@menu/navigation" />
+        app:itemIconTint="@drawable/nav_selector"
+        app:itemTextColor="@drawable/nav_selector"
+        app:menu="@menu/navigation"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fab_border"
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="5dp"
         android:elevation="8dp"
-        android:padding="1dp">
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fabCustomSize="72dp"
-            android:scaleType="center"
-            android:src="@drawable/ic_home_black_48dp"
-            app:borderWidth="0dp"
-            app:backgroundTint="@color/white"/>
-
-    </LinearLayout>
-
+        android:src="@drawable/home_nav_button"
+        android:paddingBottom="2dp">
+    </ImageView>
 
 </FrameLayout>
