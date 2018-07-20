@@ -5,12 +5,14 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView myNavigation;
     ImageView circle;
+    boolean clicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            //to trigger change of drawable
+            circle.setSelected(item.getItemId()==R.id.home);
+
+            //to trigger ripple effect
             circle.setPressed(item.getItemId()==R.id.home);
+            circle.setPressed(false);
+
             switch (item.getItemId()) {
                 case R.id.inbox:
                     return true;
